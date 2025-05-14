@@ -1,9 +1,16 @@
 {
-	"version": "0.2.1",
+	"version": "0.2.1-fhac",
     "versionData": "0.3",
-	"hostLogo":"logoLMU.png",
-	"hostUrl":"https://www.medien.ifi.lmu.de/",
+	"hostLogo":"",
+	"hostUrl":"https://applab.fh-aachen.de",
 	"institutions": {
+		"FH Aachen University of Applied Sciences": {
+			"name": "FH Aachen University of Applied Sciences",
+			"logo": "logoFHAC.png",
+			"street":"Bayernallee 11",
+			"zip":"52066",
+			"city":"Aachen"
+		},
 		"LMU Munich": {
 			"name": "LMU Munich",
 			"logo": "logoLMU.png",
