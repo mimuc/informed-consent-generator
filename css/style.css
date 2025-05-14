@@ -21,8 +21,8 @@ html, body{
 }
 
 #fhlogo {
-	position: absolute;
-	right: 0;
+	float:right;
+	height: 180px;
 	display: flex;
 	margin-left: 12px;
 }
@@ -33,6 +33,12 @@ html, body{
 }
 
 #firstItem img {
+	max-height: 120px;
+	max-width: 150px;
+	margin-bottom: 50px;
+}
+
+#hostLogo {
 	max-height: 120px;
 	max-width: 150px;
 	margin-bottom: 50px;
