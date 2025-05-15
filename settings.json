@@ -1,7 +1,7 @@
 {
 	"version": "0.2.1-fhac",
     "versionData": "0.3",
-	"hostLogo":"",
+	"hostLogo":"logoFHAC.png",
 	"hostUrl":"https://applab.fh-aachen.de",
 	"institutions": {
 		"FH Aachen University of Applied Sciences": {
