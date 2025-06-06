@@ -96,7 +96,7 @@
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordMotion" id="recordMotion" onchange="onChange(event)"><label class="form-check-label" for="recordMotion">Motion Tracking</label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordPhysiological" id="recordPhysiological" onchange="onChange(event)"><label class="form-check-label" for="recordPhysiological">Physio. Sensing</label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordEyetracking" id="recordEyetracking" onchange="onChange(event)"><label class="form-check-label" for="recordEyetracking">Eye/Head Tracking</label></div>
-                                <div class="col"><input type="checkbox" class="form-check-input" name="recordScreenrecoding" id="recordScreenrecoding" onchange="onChange(event)"><label class="form-check-label" for="recordScreenrecoding">Screen Recording</label></div>
+                                <div class="col"><input type="checkbox" class="form-check-input" name="recordScreenrecording" id="recordScreenrecording" onchange="onChange(event)"><label class="form-check-label" for="recordScreenrecording">Screen Recording</label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordNotes" id="recordNotes" onchange="onChange(event)"><label class="form-check-label" for="recordNotes">Manual notes</label></div>
                             </div>                      
                         </div>                      
@@ -244,7 +244,7 @@
         }
 
         var inputKeys = ["title", "duration", "personalData", "storageTime", "purpose", "goal", "departmentHead", "thePIname", "thePIemail", "participants", "monetaryCompensation", "ethicalComittee", "funding"];
-        var inputRecord = ["demographics", "contact", "audio", "photos", "videos", "motion", "physiological", "eyetracking", "screenrecoding", "notes", "interaction"];
+        var inputRecord = ["demographics", "contact", "audio", "photos", "videos", "motion", "physiological", "eyetracking", "screenrecording", "notes", "interaction"];
 
         function myXOR(a,b) {
           return ( a || b ) && !( a && b );
@@ -509,7 +509,7 @@
                 str += "<li>We will track your eye and head motion during the session.</li>";
             if(data["record"]["physiological"])
                 str += "<li>We will take physiological measurements of your body.</li>";
-            if(data["record"]["screenrecoding"])
+            if(data["record"]["screenrecording"])
                 str += "<li>We will record the screen on your device that are necessary for the study.</li>";
             if(data["record"]["interaction"])
                 str += "<li>We will record interaction data (e.g., clickes, timings) during the session.</li>";
@@ -659,7 +659,7 @@
             if(data["record"]["motion"]) records.push("record your body motion");
             if(data["record"]["eyetracking"]) records.push("record your eye motion");
             if(data["record"]["physiological"]) records.push("take physiological measurements");
-            if(data["record"]["screenrecoding"]) records.push("record the screen and/or activities on your device");
+            if(data["record"]["screenrecording"]) records.push("record the screen and/or activities on your device");
             if(data["record"]["interaction"]) records.push("record your interactions");
             if(data["record"]["notes"]) records.push("make manual notes");
             if(data["type"] == "online study"){
