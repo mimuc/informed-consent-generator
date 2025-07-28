@@ -183,18 +183,18 @@
         <p>If you have any questions or concerns about the research, please feel free to contact: </p>
         <div class="row">
             {{#if researchers}}
-                <div class="{{#if thePIname}}col-8{{else if departmenthead}}col-4{{else}}col-12{{/if}}">
+                <div class="{{#if departmentHead}}col-4{{else if thePIname}}col-8{{else}}col-12{{/if}}">
                 {{#each researchers}}
                     {{../prefix}} {{name}} ({{email}}) <br />
                 {{/each}}
                 </div>
             {{/if}}
             {{#if thePIname}}
-                <div class="{{#if researchers}}col-4{{else if departmenthead}}col-8{{else}}col-12{{/if}}">{{thePIname}}<br />Principal Investigator<br />{{street}}<br />{{zip}} {{city}}<br />{{#if country}}{{country}}<br />{{/if}}{{thePIemail}}</div>
+                <div class="{{#if researchers}}col-4{{else if departmentHead}}col-8{{else}}col-12{{/if}}">{{thePIname}}<br />Principal Investigator<br />{{street}}<br />{{zip}} {{city}}<br />{{#if country}}{{country}}<br />{{/if}}{{thePIemail}}</div>
             {{/if}}
-            {{#if departmenthead}}
-                {{#if (unequal departmenthead thePIname)}}
-                    <div class="col-4">{{departmenhead}}<br />Professor/Head of Department<br />{{street}}<br />{{zip}} {{city}}<br />{{country}}</div>
+            {{#if departmentHead}}
+                {{#if (unequal departmentHead thePIname)}}
+                    <div class="col-4">{{departmentHead}}<br />Professor/Head of Department<br />{{street}}<br />{{zip}} {{city}}<br />{{country}}</div>
                 {{/if}}
             {{/if}}
         </div>
