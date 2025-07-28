@@ -302,7 +302,6 @@
 
 
             $("#hostUrl").attr("href", settings["hostUrl"]);
-            console.log(settings["hostLogo"]);
             $("#hostLogo").attr("src", "img/" + settings["hostLogo"]);
 
             let cookieData = getCookie("data");
@@ -414,17 +413,22 @@
         }
 
         function generate(){
+
+            $(".uiView").show();
+            $(".uiEdit").hide();
+            $("#input").hide();
+            $("#fieldsrequired").hide();
+
             var template = Handlebars.templates.template_en;
             data = collectData();
             let institution = settings["institutions"][data["institution"]]
-            console.log({...data, ...institution});
             if (template != null) {
                 let result = template({...data, ...institution});
                 $("#results").html(result);
             }
 
             setTimeout(function () {
-                     window.print();
+                     // window.print();
                  }, 100);
         }
 
@@ -461,20 +465,7 @@
                 downloadObjectAsJson(data, "exportInformedConsent.json");
             });
 
-            $("#btnTemplate").click(function() {
-
-                var template = Handlebars.templates.template_en;
-                data = collectData();
-                let institution = settings["institutions"][data["institution"]]
-                console.log({...data, ...institution});
-                if (template != null) {
-                    let result = template({...data, ...institution});
-                    $("#results").html(result);
-                }
-
-            });
-
-            $("#btnLoad").click(function() { 
+            $("#btnLoad").click(function() {
                 $("#fileInput").click();
             });
 
