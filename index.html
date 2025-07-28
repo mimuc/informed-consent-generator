@@ -66,25 +66,25 @@
                     </div>
                     <hr />
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="institutionText">Your Institution</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><select class="form-control" name="institution" onchange="onChange(event)" required></select></div>
+                        <div class="col-4"><label id="institutionText" for="institution" class="danger">Your Institution</label></div>
+                        <div class="col-8"><select class="form-control" id="institution" name="institution" onchange="onChange(event)" required></select></div>
                     </div>
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="researchText">Kind of research</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><select class="form-control" name="type" onchange="onChange(event)" required></select></div>
+                        <div class="col-4"><label id="researchText" for="studyType" class="danger">Kind of research</label></div>
+                        <div class="col-8"><select class="form-control" id="studyType" name="type" onchange="onChange(event)" required></select></div>
                     </div>
                     
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="topicText">Title</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><input class="form-control" name="title" onchange="onChange(event)" required></input></div>
+                        <div class="col-4"><label id="topicText" for="title" class="danger">Title</label></div>
+                        <div class="col-8"><input class="form-control" id="title" name="title" onchange="onChange(event)" required /></div>
                     </div> 
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="compensationText">Compensation</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><select class="form-control" name="compensation" onchange="onChange(event)" required></select></div>
+                        <div class="col-4"><label id="compensationText"  for="compensation" class="danger">Compensation</label></div>
+                        <div class="col-8"><select class="form-control" id="compensation" name="compensation" onchange="onChange(event)" required></select></div>
                     </div>
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="monetaryCompensationText">Monetary Compensation </span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><input class="form-control" name="monetaryCompensation" onchange="onChange(event)" required></input></div>
+                        <div class="col-4"><label id="monetaryCompensationText" for="monetaryCompensation" class="danger">Monetary Compensation </label></div>
+                        <div class="col-8"><input class="form-control" id="monetaryCompensation" name="monetaryCompensation" onchange="onChange(event)" required /></div>
                     </div>
                     <div class="row mt-3 ">
                         <div class="col-4"><span id="recordingsText">Recorded Data</span></div>
@@ -105,69 +105,69 @@
                         </div>                      
                     </div> 
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="personalDataText">Which personal data will be collected? (list all)</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><input class="form-control" name="personalData" onchange="onChange(event)" required></input></div>
+                        <div class="col-4"><label id="personalDataText" for="personalData" class="danger">Which personal data will be collected? (list all)</label></div>
+                        <div class="col-8"><input class="form-control"  id="personalData" name="personalData" onchange="onChange(event)" required /></div>
                     </div>
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="storageTimeText">How long will the data stored with the researchers?</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><input class="form-control" name="storageTime" onchange="onChange(event)" required></input></div>
+                        <div class="col-4"><label id="storageTimeText" for="storageTime" class="danger">How long will the data stored with the researchers?</label></div>
+                        <div class="col-8"><input class="form-control" id="storageTime" name="storageTime" onchange="onChange(event)" required /></div>
                     </div>
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="shareText">Do you make the raw data public?</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><select class="form-control" name="share" onchange="onChange(event)" required></select></div>
+                        <div class="col-4"><label id="shareText" for="share" class="danger">Do you make the raw data public?</label></div>
+                        <div class="col-8"><select class="form-control" id="share"  name="share" onchange="onChange(event)" required></select></div>
                     </div>
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="encryptionText">Will the data be stored encrypted?</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><select class="form-control" name="encryption" onchange="onChange(event)" required></select></div>
+                        <div class="col-4"><label id="encryptionText" for="encryption" class="danger">Will the data be stored encrypted?</label></div>
+                        <div class="col-8"><select class="form-control" id="encryption" name="encryption" onchange="onChange(event)" required></select></div>
                     </div>
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="durationText">Estimated Study Duration</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><input class="form-control" name="duration" onchange="onChange(event)" required></input></div>
+                        <div class="col-4"><label id="durationText" for="duration" class="danger">Estimated Study Duration</label></div>
+                        <div class="col-8"><input class="form-control" id="duration" name="duration" onchange="onChange(event)" required /></div>
                     </div> 
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="numberOfParticipantsText">Estimated Number of Participants</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><input class="form-control" name="participants" onchange="onChange(event)" required></input></div>
+                        <div class="col-4"><label id="numberOfParticipantsText" for="participants" class="danger">Estimated Number of Participants</label></div>
+                        <div class="col-8"><input class="form-control" id="participants" name="participants" onchange="onChange(event)" required /></div>
                     </div> 
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="purposeText">Purpose (one sentence)</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><input class="form-control" name="purpose" onchange="onChange(event)" required></input></div>
+                        <div class="col-4"><label id="purposeText" for="purpose" class="danger">Purpose (one sentence)</label></div>
+                        <div class="col-8"><input class="form-control" id="purpose" name="purpose" onchange="onChange(event)" required /></div>
                     </div> 
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="goalText">Goal (one sentence)</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><input class="form-control" name="goal" onchange="onChange(event)" required></input></div>
+                        <div class="col-4"><label id="goalText" for="goal" class="danger">Goal (one sentence)</label></div>
+                        <div class="col-8"><input class="form-control" id="goal" name="goal" onchange="onChange(event)" required  /></div>
                     </div> 
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="procedureText">Procedure (in 4-6 steps)</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><textarea rows="4" class="form-control" name="procedure" onchange="onChange(event)" required></textarea></div>
+                        <div class="col-4"><label id="procedureText" for="procedure" class="danger">Procedure (in 4-6 steps)</label></div>
+                        <div class="col-8"><textarea rows="4" class="form-control" id="procedure" name="procedure" onchange="onChange(event)" required></textarea></div>
                     </div> 
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="thePIname">First Researchers' Name (The PI)</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><input class="form-control" name="thePIname" onchange="onChange(event)" required></input></div>
+                        <div class="col-4"><label id="thePInameLabel" for="thePIname" class="danger">First Researchers' Name (The PI)</label></div>
+                        <div class="col-8"><input class="form-control" id="thePIname" name="thePIname" onchange="onChange(event)" required /></div>
                     </div>
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="thePIemail">First Researchers' E-Mail</span><span class="text-danger">*</span><br /></div>
-                        <div class="col-8"><input class="form-control" type="email" name="thePIemail" onchange="onChange(event)" required></input></div>
+                        <div class="col-4"><label id="thePIemailLabel" for="thePIemail" class="danger">First Researchers' E-Mail</label></div>
+                        <div class="col-8"><input class="form-control" type="email" id="thePIemail" name="thePIemail" onchange="onChange(event)" required /></div>
                     </div>
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="PIText">Head of the Department (if not = PI)</span></div>
-                        <div class="col-8"><input class="form-control" name="departmentHead" onchange="onChange(event)"></input></div>
+                        <div class="col-4"><label id="PIText" for="departmentHead">Head of the Department (if not = PI)</label></div>
+                        <div class="col-8"><input class="form-control" id="departmentHead" name="departmentHead" onchange="onChange(event)" /></div>
                     </div>
                     <div class="row mt-3" id="addResearchersContainer">
-                        <div class="col-4"><span id="additionalResearchers">All other researchers' involved</span><span class="text-danger">*</span></div>
-                        <div class="col-8"><button class="btn btn-success" id="btnAddResearcher" type="button" id="button-add-researcher">+ Add Addional Researcher</button></div>
+                        <div class="col-4"><span id="additionalResearchers" class="danger">All other researchers' involved</span></div>
+                        <div class="col-8"><button class="btn btn-success" id="btnAddResearcher" type="button" >+ Add Additional Researcher</button></div>
                     </div>
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="funding">Funding</span></div>
-                        <div class="col-8"><input class="form-control" name="funding" onchange="onChange(event)"></input></div>
+                        <div class="col-4"><label id="fundingLabel" for="funding">Funding</label></div>
+                        <div class="col-8"><input class="form-control" id="funding" name="funding" onchange="onChange(event)" /></div>
                     </div>
                     <div class="row mt-3 ">
-                        <div class="col-4"><span id="ethicalComitteeText">Ethical Comittee</span></div>
-                        <div class="col-8"><input class="form-control" name="ethicalComittee" onchange="onChange(event)"></input></div>
+                        <div class="col-4"><label id="ethicalComitteeText" for="ethicalComittee">Ethical Committee</label></div>
+                        <div class="col-8"><input class="form-control" id="ethicalComittee" name="ethicalComittee" onchange="onChange(event)" /></div>
                     </div>
                     </div>
                     <div class="row mt-3 mb-3 itemRow" id="fieldsrequired">
                         <div class="col" >
-                            <span class="text-danger">* fields required</span> <br />
+                            <span class="text-danger">* required fields</span> <br />
                         </div>
                     </div>
                     <hr class="uiEdit">
@@ -176,7 +176,7 @@
                             <a id="btnExample" class="btn btn-secondary btn-md float-left mr-3 " >Example</a> 
                             <a id="btnSave" class="btn btn-secondary btn-md float-left mr-3 btnSave" >Save Settings (*.json)</a>
                             <a id="btnLoad" class="btn btn-secondary btn-md float-left mr-3">Load Settings (*.json)</a>
-                            <input class="form-control form-control-sm" id="fileInput" type="file" type="hidden" style='display: none;'>
+                            <input class="form-control form-control-sm" id="fileInput" type="file" style='display: none;'>
                         </div>
                         <div class="d-grid gap-2 col-4 mx-auto">
                             <button id="btnGenerate" class="btn btn-primary btn-md float-right" type="Submit" value="">Generate From</button>
@@ -289,10 +289,10 @@
             
             var hints = settings["hints"]
             for (let key in hints) {
-                if (key == "select"){
+                if (key === "select"){
                     //None
                 }
-                else if (key == "procedure"){
+                else if (key === "procedure"){
                     $("textarea[name='" + key + "'] ").attr("placeholder", hints[key]);
                 } else {
                     $("input[name='" + key + "'] ").attr("placeholder", hints[key]);
@@ -318,7 +318,7 @@
         function addResearcher (){
             var lstResearchers = document.getElementsByClassName("researchersContainer");
                 var lastElement = null;
-                if (lstResearchers.length == 0){
+                if (lstResearchers.length === 0){
                     lastElement = document.getElementById("addResearchersContainer");
                 } else {
                     lastElement = lstResearchers[lstResearchers.length-1];
@@ -327,17 +327,17 @@
                         <div class="col-4"></div>
                         <div class="col-8">
                             <div class="row mt-3">
-                                <div class="col-2"><span class="researcherName">Name</span><span class="text-danger">*</span></div>
+                                <div class="col-2"><span class="researcherName danger">Name</span></div>
                                 <div class="col-10">
                                     <div class="input-group">
-                                    <input class="form-control" name="researcherName" onchange="onChange(event)" required></input>
+                                    <input class="form-control" name="researcherName" onchange="onChange(event)" required />
                                     <button class="btn btn-danger btnRemoveResearcher" onclick="removeResearcher(1)" type="button">-</button>
                                     </div>
                                 </div>    
                             </div>
                             <div class="row mt-3">
-                                <div class="col-2"><span class="researcherEmail">E-Mail</span><span class="text-danger">*</span></div>
-                                <div class="col-10"><input class="form-control" name="researcherEmail" input type="email" onchange="onChange(event)" required></input>
+                                <div class="col-2"><span class="researcherEmail danger">E-Mail</span></div>
+                                <div class="col-10"><input class="form-control" name="researcherEmail"  type="email" onchange="onChange(event)" required />
                                 </div>
                             </div>
                         </div>
