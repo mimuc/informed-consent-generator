@@ -58,8 +58,8 @@
 		["No", "no"]
 	],
 	"dataEncryption": [
-		["Yes", "yes"],
-		["No", "no"]
+		["Yes", true],
+		["No", false]
 	],
 	"researcherCount":2,
 	"hints": {
