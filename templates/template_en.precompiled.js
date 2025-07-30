@@ -603,7 +603,7 @@ templates['template_en'] = template({"1":function(container,depth0,helpers,parti
         return undefined
     };
 
-  return "<div class=\"frameStyle\">\n    <div class=\"row\" id=\"firstItem\">\n        <div class=\"col mt-2 mb-2 \"><img alt=\"Logo\" class=\"float-right\" src=\"../img/logoFHAC.png\"></div>\n    </div>\n    <div class=\"pageBreak\"><h1>Informed Consent of Participation</h1>\n        <p>You are invited to participate in the "
+  return "<div class=\"frameStyle\">\n    <div class=\"row\" id=\"firstItem\">\n        <div class=\"col mt-2 mb-2 \"><img alt=\"Logo\" class=\"float-right\" src=\"../img/logoLMU.png\"></div>\n    </div>\n    <div class=\"pageBreak\"><h1>Informed Consent of Participation</h1>\n        <p>You are invited to participate in the "
     + alias4(((helper = (helper = lookupProperty(helpers,"type") || (depth0 != null ? lookupProperty(depth0,"type") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"type","hash":{},"data":data,"loc":{"start":{"line":6,"column":49},"end":{"line":6,"column":57}}}) : helper)))
     + " <b>"
     + alias4(((helper = (helper = lookupProperty(helpers,"title") || (depth0 != null ? lookupProperty(depth0,"title") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data,"loc":{"start":{"line":6,"column":61},"end":{"line":6,"column":70}}}) : helper)))
