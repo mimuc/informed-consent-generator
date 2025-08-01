@@ -78,7 +78,6 @@
                             <div class="row row-cols-3">
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordDemographics" id="recordDemographics" onchange="onChange(event)" checked required><label class="form-check-label" for="recordDemographics">Demographics<span class="text-danger">*</span></label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordContact" id="recordContact" onchange="onChange(event)"><label class="form-check-label" for="recordContact">Contact information</label></div>
-                                <div class="col"><input type="checkbox" class="form-check-input" name="recordNotes" id="recordNotes" onchange="onChange(event)"><label class="form-check-label" for="recordNotes">Manual notes</label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordInteraction" id="recordInteraction" onchange="onChange(event)"><label class="form-check-label" for="recordInteraction">User Interaction</label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordAudio" id="recordAudio" onchange="onChange(event)"><label class="form-check-label" for="recordAudio">Audio</label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordPhotos" id="recordPhotos" onchange="onChange(event)"><label class="form-check-label" for="recordPhotos">Photos</label></div>
@@ -403,9 +402,10 @@
             $(".uiEdit").hide();
             $("#input").hide();
             $("#fieldsrequired").hide();
-
+          
             var template = Handlebars.templates.template_en;
             data = collectData();
+          
             let institution = settings["institutions"][data["institution"]]
             if (template != null) {
                 let result = template({...data, ...institution});

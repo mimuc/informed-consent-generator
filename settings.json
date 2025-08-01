@@ -1,6 +1,6 @@
 {
 	"version": "0.3.0",
-    "versionData": "0.3",
+  "versionData": "0.3",
 	"hostLogo":"logoLMU.png",
 	"hostUrl":"https://www.medien.ifi.lmu.de/",
 	"institutions": {
@@ -74,10 +74,6 @@
 		"thePIemail": "email of the guy, who said you should do the study",
 		"procedure": "1. Participant takes a seat\n2. Participant conducts the study\n3. Participant is confused\n4.Participant leaves",
 		"participants": "Insert number",
-		"secondResearcherName": "Eva Musterfrau",
-		"secondResearcherEmail": "eva.musterfrau@gmail.com",
-		"thirdResearcherName": "Eva Musterfrau",
-		"thirdResearcherEmail": "eva.musterfrau@gmail.com",
 		"funding": "Your funding",
 		"duration": "60 minutes",
 		"purpose": "Explain the purpose of this research.",
