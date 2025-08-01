@@ -7,7 +7,7 @@ html, body{
 	height:100% !important; /* important to vertically align the container */
 	margin:0 auto;
     padding:0;
-	font-size: 14px;
+	font-size: 0.95em;
 }
 
 #results{
@@ -19,6 +19,63 @@ html, body{
     border: 1px solid black;
     text-align: justify;
 }
+
+#fhlogo {
+	float:right;
+	height: 18	0px;
+	display: flex;
+	margin-left: 12px;
+}
+
+#firstItem {
+	float:right;
+	margin-left: 15px;
+}
+
+#firstItem img {
+	max-height: 120px;
+	max-width: 150px;
+	margin-bottom: 50px;
+}
+
+#hostLogo {
+	max-height: 120px;
+	max-width: 150px;
+	margin-bottom: 50px;
+}
+
+.check {
+	font-size: 1.5em;
+	vertical-align: top;
+	padding: 0.5rem;
+}
+
+#signatures .sign {
+	border-bottom: 1px solid #000;
+	height: 3.1em;
+	width: 48%;
+}
+
+td.additional {
+	padding-left: 1em;
+}
+
+#signatures td {
+	margin: 10px;
+}
+
+#signatures {
+	width: 100%;
+	padding: 1em 0;
+	border-spacing: 20px 0;
+	border-collapse: separate;
+}
+
+.danger::after {
+	content: '*';
+	color: rgba(220,53,69,1);
+}
+
 @page {
     size: auto;   /* auto is the initial value */
     margin: 0;  /* this affects the margin in the printer settings */
@@ -46,7 +103,15 @@ html, body{
 	}
 
 	#firstItem{
-	     margin-top:-5mm;  /* this affects the margin in the printer settings */
+	    margin-top:-5mm;  /* this affects the margin in the printer settings */
+		float:right;
+		margin-left: 15px;
+	}
+
+	#firstItem img {
+		max-height: 120px;
+		max-width: 150px;
+		margin-bottom: 50px;
 	}
 
 	.pageBreak{
@@ -109,6 +174,7 @@ html, body{
     font-weight: normal !important;
     vertical-align: top;
 }
+
 #results{
     font-family: Arial !important;
 }

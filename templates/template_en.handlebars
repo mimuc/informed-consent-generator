@@ -1,0 +1,268 @@
+<div class="frameStyle">
+    <div class="row" id="firstItem">
+        <div class="col mt-2 mb-2 "><img alt="Logo" class="float-right" src="../img/logoLMU.png"></div>
+    </div>
+    <div class="pageBreak"><h1>Informed Consent of Participation</h1>
+        <p>You are invited to participate in the {{type}} <b>{{title}}</b>, initiated and conducted by {{#each researchers}}{{../prefix}}{{name}}{{#unless @last}}, {{/unless}}{{#if @last}}, and {{/if}}{{/each}}{{thePIname}}. The
+            research is supervised by {{thePIname}} at {{institution}}{{#if (unequal departmentHead thePIname)}} under {{departmentHead}}{{/if}}.
+            {{#if funding}}This study is funded and financed by the research project {{funding}}.{{/if}}
+            Please note:</p>
+        <ul>
+            <li>Your participation is voluntary.</li>
+            <li>The {{type}} will last approximately {{duration}}.</li>
+            {{#if record.demographics}}<li>We will record personal demographics ({{personalData}}).</li>{{/if}}
+            {{#if record.photos}}<li>We will take photos during the session.</li>{{/if}}
+            {{#if record.videos}}<li>We will record videos during the session.</li>{{/if}}
+            {{#if record.audio}}<li>We will record audio during the session.</li>{{/if}}
+            {{#if record.motion}}<li>We will track your body motion during the session.</li>{{/if}}
+            {{#if record.eyetracking}}<li>We will track your eye and head motion during the session.</li>{{/if}}
+            {{#if record.physiological}}<li>We will take physiological measurements of your body.</li>{{/if}}
+            {{#if record.screenrecording}}<li>We will record the screen on your device that are necessary for the study.</li>{{/if}}
+            {{#if record.interaction}}<li>We will record interaction data (e.g., clicks, timings) during the session.</li>{{/if}}
+            {{#if (equal compensation 'points')}}<li>You will receive 1 credit point per hour for your study course as compensation.</li>
+            {{else if (equal compensation 'moneyPoints')}}<li>You will receive 1 credit point per hour for your study course as compensation or {{monetaryCompensation}} as monetary compensation.</li>
+            {{else if (equal compensation 'money')}}<li>You will receive {{monetaryCompensation}} as compensation.</li>
+            {{else}}<li>You will receive no compensation.</li>{{/if}}
+            <li>We may publish results from this and other sessions.</li>
+            {{#if (equal share 'yes')}}<li>All data you provide in this {{type}} will be published <b>not anonymized</b></li>.
+            {{else if (equal share 'anonymized')}}<li>All data you provide in this field study will be published anonymized; thus, they will neither include your name nor cannot be associated with your identity.</li>
+            {{else}}<li>The data collected cannot be viewed or used for further research by anyone outside the researchers involved in this work. </li>{{/if}}
+        </ul>
+        <p>If you have any questions about the whole informed consent process of this research or your rights as a
+            human research subject, please contact
+            {{#if ethicalComittee}}
+                our ethics committee office: {{ethicalComittee}}.
+            {{else}}
+                {{#if departmentHead}}
+                    {{thePIname}} (E-Mail: {{thePIemail}}) or {{departmentHead}}.
+                {{else}}
+                    {{thePIname}} (E-Mail: {{thePIemail}}).
+                {{/if}}
+            {{/if}}
+
+            You should carefully read the settings below. You may take as much time as you need to read the consent
+            form. If you do not fully agree with something, or if your questions have not all been answered to your
+            satisfaction, then you should not give your consent. </p>
+    </div>
+    <div class="pageBreak"><h3>1. Purpose and Goal of this Research</h3>
+        <p>{{Purpose}} {{goal}} Your participation will help us achieve this goal. The results of this research may be
+            presented at scientific or professional meetings or published in scientific proceedings and
+            journals.</p></div>
+    <div class="pageBreak"><h3>2. Participation and Compensation</h3>
+        <p>Your participation in this {{type}} is voluntary. You will be one of approximately {{participants}} people being
+            {{#if (equal type 'online study')}}surveyed{{/if}}
+            {{#if (equal type 'user study')}}tested{{/if}}
+            {{#if (equal type 'field study')}}surveyed{{/if}}
+            {{#if (equal type 'interview')}}interviewed{{/if}}
+             for this research.
+            {{#if (equal compensation 'none')}}You will receive no compensation.
+            {{else if (equal compensation 'points')}}You will receive one credit point per hour required for your study course at the {{intitution}}. You may withdraw and discontinue participation at any time without justification for withdrawing. You will still receive your credit points.
+            {{else if (equal compensation 'moneyPoints')}}You will receive {{monetaryCompensation}} as compensation for your participation or one credit point per hour required for your study course at the {{institution}}.
+            {{else if (equal compensation 'money')}}You will receive {{monetaryCompensation}} as compensation for your participation. {{/if}}
+            {{#if (equal compensation 'none')}}You may withdraw and discontinue participation at any time.
+            {{else}}You may withdraw and discontinue participation at any time without penalty or losing the compensation. {{/if}}
+            If possible, you may refuse to answer any questions you do not want to answer or withdraw from participation at any time.
+            {{#if (equal type 'experimental study')}}The investigator may withdraw you from this research if your physician tells us that continued participation may injure your health. {{/if}}
+            {{#if (equal type 'interview')}}I have the right not to answer questions, and if I feel uncomfortable in any way during the interview session, I have the right to withdraw from the interview. {{/if}}
+        </p>
+        <p>At any time and without giving any reason, you can notify us that you want to withdraw the consent given
+            (GDPR Art. 21). In case of withdrawal, your data stored based on your consent will be deleted or
+            anonymized where this is legally permissible (GDPR Art. 17). If deletion is impossible or only possible
+            with unreasonable technical effort, your data will be anonymized by deleting the personal identification
+            information. However, anonymization of your data cannot entirely exclude the possibility of subsequent
+            tracing of information to you via other sources. Finally, once the data is anonymized, the deletion of
+            the data is not possible anymore as we will not be able to identify which data is yours. </p></div>
+    <div class="pageBreak"><h3>3. Procedure</h3>
+        <p>After giving consent, you will be guided through the following steps:</p>
+        <p style="padding-left: 10px; padding-top: 0px">{{breaklines procedure}}</p>
+        <p>The complete procedure of this {{type}} will last approximately {{duration}}.</p></div>
+    <div class="pageBreak"><h3>4. Risks and Benefits</h3>
+        <p>There are no risks associated with this field study. Discomforts or inconveniences will be minor and are
+            unlikely to happen. If you feel uncomfortable, you may discontinue your participation.
+            {{#if (equal compensation 'none')}}
+                (You will not directly benefit through participation in this {{type}}. We hope that the settings obtained from your participation may help to bring forward the research in this field.)
+            {{else}}
+                Your benefit in participating is your compensation described above.
+            {{/if}}
+            With this research, we will advance knowledge in this research field.</p></div>
+    <div class="pageBreak"><h3>5. Data Protection and Confidentiality</h3>
+        <p>The General Data Protection Regulation (GDPR) of the European Union (EU) governs that data collection
+            process. The legal basis for processing the personal data is the consent in accordance with GDPR Art. 6
+            (1). The GDPR guarantees a set of right to the data subjects, including the right to access,
+            rectification, and erasure of personal data. </p>
+        <ul>
+            <li>You have the right to access your personal data at any time (GDPR Art. 15).</li>
+            <li>You have the right to correct inaccurate personal data at any time (GDPR Art. 16).</li>
+            <li>You have the right to have your personal data deleted (GDPR Art. 17).</li>
+            <li>You have the right to limit the processing of your personal data (GDPR Art. 18).</li>
+            <li>You have the right to have your data transferred to others (GDPR Art. 20).</li>
+            <li>You have the right to withdraw the consent given (GDPR Art. 21).</li>
+        </ul>
+        <p>If you wish to exercise any of your rights, please contact the researchers. </p>
+        <p>{{#if record.demographics}}Personal data ({{personalData}}) will be recorded during participation. {{/if}}
+            {{#if (equal type 'online study')}}The contact details of the study participants can be used to track potential infection chains. {{/if}}
+            Researchers will not identify you by your real name in any reports using settings obtained from this {{type}}, and
+            your confidentiality as a participant in this {{type}} will remain secure.
+            {{#if (equal encryption 'true')}}All the data you provide in this {{type}} will be encrypted. {{/if}}
+            Data collected in this {{type}} will be treated in compliance with the GDPR. </p>
+        <p>We will
+            {{#each record}}
+
+                {{#if (equal @key 'demographics')}}record demographics{{/if}}
+                {{@key}}{{this}}
+            {{/each}}
+            <!-- TODO: make comma-separated list, probably using a helper -->
+            {{#if record.demographics}}record demographics{{/if}}
+            {{#if record.contact}}record contact information{{/if}}
+            {{#if record.photos}}take photos{{/if}}
+            {{#if record.videos}}record video{{/if}}
+            {{#if record.audio}}record audio{{/if}}
+            {{#if record.motion}}record you body motion{{/if}}
+            {{#if record.eyetracking}}record your eye-motion{{/if}}
+            {{#if record.physiological}}take physiological measurements{{/if}}
+            {{#if record.screenrecording}}record the screen and/or activities on your device{{/if}}
+            {{#if record.interaction}}record your interactions{{/if}}
+            {{#if record.notes}}take manual notes {{/if}}
+            {{#if (equal type 'online study')}}record browser meta data{{/if}}
+             during the {type}.
+
+
+            {{#if (equal share 'yes')}}
+                All data you provide in this {{type}} will be published <b>not anonymized</b>. Subsequent uses of records and data will be subject to standard data use policies.
+            {{else if (equal share 'anomymized')}}
+                All data you provide in this {{type}} will be published anonymized. Subsequent uses of records and data
+                will be subject to standard data use policies that protect the participating individuals' anonymity. We
+                will remove or code any personal information that could identify you before publishing the data to
+                ensure that no one can identify you from the information we share. We will use current scientific
+                standards and known methods for anonymization. When your data are anonymized, they are altered in a
+                manner that they can no longer be traced back to your person or only with disproportionate technical
+                effort. Despite these measures, we cannot guarantee the anonymity of your personal data.
+            {{else}}
+                All data you provide in this {{type}} will not be published and kept confidential.
+            {{/if}}
+
+            {{#if (equal type 'interview')}}
+                {{#if (unequal share 'yes')}}
+                        The interview transcript will be primarily analyzed by {{#if thePIname}}{{thePIname}}{{/if}}{{#if secondResearcherName}}{{#if thePIname}} and{{/if}} {{secondResearcherName}}{{/if}}{{#if thirdResearcherName}}{{#if secondResearcherName}} and{{/if}} {{thirdResearcherName}}{{/if}}.
+                        Access to the raw interview transcript will be limited to the authors of this research, academic colleagues, and researchers with whom he might collaborate as part of the research process.
+                        Any summary interview content, or direct quotations from the interview, that are made available through academic publications or other outlets will be anonymized so that you cannot be identified, and care will be taken to ensure that other settings in the interview that could identify you is not revealed. I have the right not to answer questions, and if I feel uncomfortable in any way during the interview session, I have the right to withdraw from the interview.
+                {{/if}}
+            {{/if}}
+
+            {{#if (equal type 'online study')}}
+                This site uses cookies and other tracking technologies to conduct the research, to improve the user experience, the ability to interact with the system and to provide additional content from third parties. Despite careful control of content, the researchers assume no liability for damages, which directly or indirectly result from the use of this online application.
+            {{/if}}
+        </p>
+
+        <p>
+            {{#if (unequal share 'yes')}}
+                Your non-anonymized data will be stored for {{storageTime}} from the time your consent is given, unless you withdraw your consent before this period has elapsed. Your non-anonymized data will be stored in a secure location and will be accessible only to the researchers involved in this work.
+            {{else}}
+                Your non-anonymized data will be stored indefinitely, unless you withdraw your consent.
+            {{/if}}
+        </p>
+        <p>
+            {{#if (equal share 'yes')}}
+                Non-anonymized data collected can be shared publicly unless you have not signed the separate permission form allowing us to so (see below).
+            {{else if (equal share 'anonymized')}}
+                Anonymized data collected can be shared publicly.
+            {{else}}
+                The data collected cannot be viewed or used for further research by everyone outside the researchers involved in this work.
+            {{/if}}
+
+            {{#if (equal share 'no')}}
+                The data collected will be deleted after the end of the research, or if you contact the researcher to delete them.
+            {{else}}
+                Data collected that have not been made public will be deleted after the end of the research.
+            {{/if}}
+        </p>
+        <p>As with any publication or online-related activity, the risk of a breach of confidentiality is always
+            possible. According to the GDPR, the researchers will inform the participant if a breach of confidential
+            data is detected. </p></div>
+    <div class="pageBreak"><h3>6. Identification of Investigators</h3>
+        <p>If you have any questions or concerns about the research, please feel free to contact: </p>
+        <div class="row">
+            {{#if researchers}}
+                <div class="{{#if departmentHead}}col-4{{else if thePIname}}col-8{{else}}col-12{{/if}}">
+                {{#each researchers}}
+                    {{../prefix}} {{name}} ({{email}}) <br />
+                {{/each}}
+                </div>
+            {{/if}}
+            {{#if thePIname}}
+                <div class="{{#if researchers}}col-4{{else if departmentHead}}col-8{{else}}col-12{{/if}}">{{thePIname}}<br />Principal Investigator<br />{{street}}<br />{{zip}} {{city}}<br />{{#if country}}{{country}}<br />{{/if}}{{thePIemail}}</div>
+            {{/if}}
+            {{#if departmentHead}}
+                {{#if (unequal departmentHead thePIname)}}
+                    <div class="col-4">{{departmentHead}}<br />Professor/Head of Department<br />{{street}}<br />{{zip}} {{city}}<br />{{country}}</div>
+                {{/if}}
+            {{/if}}
+        </div>
+    </div>
+    <div class="pageBreak"><h3>7. Informed Consent and Agreement</h3>This consent form will be retained securely and
+        in compliance with the GDPR for no longer than necessary.
+        <table>
+            <tbody>
+            <tr>
+                <td class="check">&#9744;</td>
+                <td>I understand the explanation provided to me. I have been given a copy of this form. I have
+                    had all my questions answered to my satisfaction, and I voluntarily agree to participate in this
+                    field study.
+                </td>
+            </tr>
+            <tr>
+                <td class="check">&#9744;</td>
+                <td>I voluntarily consent to my data being recorded and subsequently processed in line with the
+                    GDPR. I have been informed about the consequences of withdrawing my consent.
+                </td>
+            </tr>
+            {{#if (equal share 'yes')}}
+                <tr>
+                    <td class="check">&#9744;</td>
+                    <td>I agree that my data records and measurements during the study can be published in context of this research in non-anonymized from.</td>
+                </tr>
+
+                {{#if record.photos}}
+                    <tr>
+                        <td class="check additional">&#9744;</td>
+                        <td class="additional">I additionally agree that photos during this study can be made and published.</td>
+                    </tr>
+                {{/if}}
+                {{#if record.videos}}
+                    <tr>
+                        <td class="check additional">&#9744;</td>
+                        <td class="additional">I additionally agree that videos during this study can be recorded and published.</td>
+                    </tr>
+                {{/if}}
+                {{#if record.audio}}
+                    <tr>
+                        <td class="check additional">&#9744;</td>
+                        <td class="additional">I additionally agree that audio files during this study can be recorded and published.</td>
+                    </tr>
+                {{/if}}
+                <tr><td colspan="2">I understand that data will be anonymized cannot be associated with my name. From the consent of publication, I do not derive any rights (such as any renumeration or co-authorship). This declaration of consent is revocable at any time in line with the GDPR. In the case of revocation, the published recordings, insofar as they are subject to the disposition of the researchers, will be removed. Further recordings are no longer used or published after revocation of publication.</td></tr>
+            {{/if}}
+            </tbody>
+        </table>
+        <table id="signatures">
+            <tbody>
+            <tr>
+                <td class="sign"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Printed Name of Subject</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="sign"></td>
+                <td class="sign"></td>
+            </tr>
+            <tr>
+                <td>Signature of Subject</td>
+                <td>Location, Date</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
