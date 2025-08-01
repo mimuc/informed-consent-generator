@@ -73,7 +73,6 @@
                             <div class="row row-cols-3">
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordDemographics" id="recordDemographics" onchange="onChange(event)" checked required><label class="form-check-label" for="recordDemographics">Demographics<span class="text-danger">*</span></label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordContact" id="recordContact" onchange="onChange(event)"><label class="form-check-label" for="recordContact">Contact information</label></div>
-                                <div class="col"><input type="checkbox" class="form-check-input" name="recordNotes" id="recordNotes" onchange="onChange(event)"><label class="form-check-label" for="recordNotes">Manual notes</label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordInteraction" id="recordInteraction" onchange="onChange(event)"><label class="form-check-label" for="recordInteraction">User Interaction</label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordAudio" id="recordAudio" onchange="onChange(event)"><label class="form-check-label" for="recordAudio">Audio</label></div>
                                 <div class="col"><input type="checkbox" class="form-check-input" name="recordPhotos" id="recordPhotos" onchange="onChange(event)"><label class="form-check-label" for="recordPhotos">Photos</label></div>
@@ -667,19 +666,7 @@
             }
             
             if(data["type"] == "interview" && data["share"] != "yes"){
-                str += "The interview transcript will be primarily analyzed by ";
-                
-                if(data["thePIname"] != ""){
-                    str += data["thePIname"];
-                }
-                if(data["secondResearcherName"] != ""){
-                    str += " and " + data["secondResearcherName"];
-                }
-                if(data["thirdResearcherName"] != ""){
-                    str += " and " + data["thirdResearcherName"];
-                }
-                str += ". ";
-
+                str += "The interview transcript will be primarily analyzed by " + additionalResearcher + data["thePIname"]  + ". ";
                 str += "Access to the raw interview transcript will be limited to the authors of this research, academic colleagues, and researchers with whom he might collaborate as part of the research process. "
                 str += "Any summary interview content, or direct quotations from the interview, that are made available through academic publications or other outlets will be anonymized so that you cannot be identified, and care will be taken to ensure that other settings in the interview that could identify you is not revealed. I have the right not to answer questions, and if I feel uncomfortable in any way during the interview session, I have the right to withdraw from the interview. ";
             }    
