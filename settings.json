@@ -18,6 +18,13 @@
 			"zip":"80337",
 			"city":"Munich"
 		},
+		"TU Dortmund University": {
+			"name": "TU Dortmund University",
+			"logo": "logoTUDortmund.png",
+			"street":"Joseph-von-Fraunhofer-Straße 25",
+			"zip":"44227",
+			"city":"Dortmund"
+		},
 		"University of Applied Sciences Frankfurt": {
 			"name": "University of Applied Sciences Frankfurt",
 			"logo": "logoFHFrankfurt.png",
