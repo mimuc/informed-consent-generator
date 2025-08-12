@@ -16,6 +16,32 @@
 
     <!-- Include Handlebars  -->
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script>Handlebars.registerHelper('listTrueKeys', function(obj) {
+        // Key → Translation mapping
+        const translations = {
+            demographics: "personal demographics",
+            contact: "contact information",
+            audio: "audio recordings",
+            photo: "photographs",
+            video: "video recordings",
+            motion: "motion data",
+            physiological: "physiological signals",
+            eyetracking: "eye-tracking data",
+            screenrecording: "screen recordings",
+            notes: "notes",
+            interaction: "interaction logs"
+        };
+
+        const items = Object.keys(obj)
+            .filter(k => obj[k])
+            .map(k => translations[k] || k); // fall back to key if no translation
+
+        if (items.length > 1) {
+            return items.slice(0, -1).join(', ') + ', and ' + items[items.length - 1];
+        }
+        return items[0] || '';
+        });
+    </script>
     <script src="./templates/template_en.precompiled.js"></script>
 
     <link rel="stylesheet" href="./css/style.css" />

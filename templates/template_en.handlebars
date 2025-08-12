@@ -99,31 +99,15 @@
             <li>You have the right to withdraw the consent given (GDPR Art. 21).</li>
         </ul>
         <p>If you wish to exercise any of your rights, please contact the researchers. </p>
-        <p>{{#if record.demographics}}Personal data ({{personalData}}) will be recorded during participation. {{/if}}
+        <p>{{#if record.demographics}}We will record personal data ({{personalData}}) during participation. {{/if}}
             {{#if (equal type 'online study')}}The contact details of the study participants can be used to track potential infection chains. {{/if}}
             Researchers will not identify you by your real name in any reports using settings obtained from this {{type}}, and
             your confidentiality as a participant in this {{type}} will remain secure.
             {{#if (equal encryption 'true')}}All the data you provide in this {{type}} will be encrypted. {{/if}}
             Data collected in this {{type}} will be treated in compliance with the GDPR. </p>
         <p>We will
-            {{#each record}}
-
-                {{#if (equal @key 'demographics')}}record demographics{{/if}}
-                {{@key}}{{this}}
-            {{/each}}
-            <!-- TODO: make comma-separated list, probably using a helper -->
-            {{#if record.demographics}}record demographics{{/if}}
-            {{#if record.contact}}record contact information{{/if}}
-            {{#if record.photos}}take photos{{/if}}
-            {{#if record.videos}}record video{{/if}}
-            {{#if record.audio}}record audio{{/if}}
-            {{#if record.motion}}record you body motion{{/if}}
-            {{#if record.eyetracking}}record your eye-motion{{/if}}
-            {{#if record.physiological}}take physiological measurements{{/if}}
-            {{#if record.screenrecording}}record the screen and/or activities on your device{{/if}}
-            {{#if record.interaction}}record your interactions{{/if}}
-            {{#if record.notes}}take manual notes {{/if}}
-            {{#if (equal type 'online study')}}record browser meta data{{/if}}
+            {{listTrueKeys record translations}}
+            {{#if (equal type 'online study')}} and record browser meta data{{/if}}
              during the {{type}}.
 
 
