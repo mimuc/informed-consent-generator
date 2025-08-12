@@ -165,22 +165,19 @@
             data is detected. </p></div>
     <div class="pageBreak"><h3>6. Identification of Investigators</h3>
         <p>If you have any questions or concerns about the research, please feel free to contact: </p>
-        <div class="row">
-            {{#if researchers}}
-                <div class="{{#if departmentHead}}col-4{{else if thePIname}}col-8{{else}}col-12{{/if}}">
-                {{#each researchers}}
-                    {{../prefix}} {{name}} ({{email}}) <br />
-                {{/each}}
-                </div>
+        {{#if researchers}}
+            <p>{{#each researchers}}
+                {{../prefix}} {{name}} ({{email}}) <br />
+            {{/each}}</p>
+        {{/if}}
+        {{#if thePIname}}
+            <p><b>Principal Investigator:</b> {{thePIname}} ({{street}}, {{zip}} {{city}}{{#if country}}, {{country}}{{/if}}, {{thePIemail}})</p>
+        {{/if}}
+        {{#if departmentHead}}
+            {{#if (unequal departmentHead thePIname)}}
+                <p><b>Department Head:</b> {{departmentHead}} ({{street}}, {{zip}} {{city}}, {{country}})</p>
             {{/if}}
-            {{#if thePIname}}
-                <div class="{{#if researchers}}col-4{{else if departmentHead}}col-8{{else}}col-12{{/if}}">{{thePIname}}<br />Principal Investigator<br />{{street}}<br />{{zip}} {{city}}<br />{{#if country}}{{country}}<br />{{/if}}{{thePIemail}}</div>
-            {{/if}}
-            {{#if departmentHead}}
-                {{#if (unequal departmentHead thePIname)}}
-                    <div class="col-4">{{departmentHead}}<br />Professor/Head of Department<br />{{street}}<br />{{zip}} {{city}}<br />{{country}}</div>
-                {{/if}}
-            {{/if}}
+        {{/if}}
         </div>
     </div>
     <div class="pageBreak"><h3>7. Informed Consent and Agreement</h3>This consent form will be retained securely and
