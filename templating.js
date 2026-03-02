@@ -21,6 +21,28 @@ function registerHandlebarHelpers() {
     Handlebars.registerHelper('unequal', function(a, b) {
         return a!==b;
     });
+
+    Handlebars.registerHelper("unequalTrim", function (a, b) {
+        const aa = a == null ? "" : String(a).trim();
+        const bb = b == null ? "" : String(b).trim();
+        return aa !== bb;
+    });
+
+    Handlebars.registerHelper("notBlank", function (v) {
+        if (v == null) return false;
+        return String(v).trim().length > 0;
+    });
+
+    Handlebars.registerHelper("joinResearchers", function (researchers, prefix) {
+        const names = (researchers ?? [])
+            .map(r => `${prefix ?? ""}${r.name ?? ""}`.trim())
+            .filter(s => s.length > 0);
+
+        if (names.length === 0) return "";
+        if (names.length === 1) return names[0];
+        if (names.length === 2) return `${names[0]} and ${names[1]}`;
+        return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
+    });
 }
 
 

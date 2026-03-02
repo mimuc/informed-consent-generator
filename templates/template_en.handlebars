@@ -3,10 +3,21 @@
         <div class="col mt-2 mb-2 "><img alt="Logo" class="float-right" src="./img/{{logo}}"></div>
     </div>
     <div class="pageBreak"><h1>Informed Consent of Participation</h1>
-        <p>You are invited to participate in the {{type}} <b>{{title}}</b>, initiated and conducted by {{#each researchers}}{{../prefix}}{{name}}{{#unless @last}}, {{/unless}}{{#if @last}}, and {{/if}}{{/each}}{{thePIname}}. The
-            research is supervised by {{thePIname}} at {{institution}}{{#if (unequal departmentHead thePIname)}} under {{departmentHead}}{{/if}}.
-            {{#if funding}}This study is funded and financed by the research project {{funding}}.{{/if}}
-            Please note:</p>
+        <p>
+            You are invited to participate in the {{type}} <b>{{title}}</b>, initiated and conducted by
+            {{joinResearchers researchers prefix}}.
+            The research is supervised by
+            {{#if (notBlank thePIname)}}{{thePIname}}{{else}}the responsible investigator{{/if}}
+            at {{institution}}{{~#if (notBlank departmentHead)}}
+                {{~#if (notBlank thePIname)}}
+                {{~#if (unequalTrim departmentHead thePIname)}} under {{departmentHead}}{{/if~}}
+                {{~/if}}
+            {{~/if}}.
+            {{#if funding}}
+                This study is funded and financed by the research project {{funding}}.
+            {{/if}}
+            Please note:
+        </p>
         <ul>
             <li>Your participation is voluntary.</li>
             <li>The {{type}} will last approximately {{duration}}.</li>
