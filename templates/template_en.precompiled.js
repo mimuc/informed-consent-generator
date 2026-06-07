@@ -526,7 +526,7 @@ templates['template_en'] = template({"1":function(container,depth0,helpers,parti
     + alias4(((helper = (helper = lookupProperty(helpers,"country") || (depth0 != null ? lookupProperty(depth0,"country") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"country","hash":{},"data":data,"loc":{"start":{"line":187,"column":93},"end":{"line":187,"column":104}}}) : helper)))
     + ")</p>\n";
 },"130":function(container,depth0,helpers,partials,data) {
-    return "                   I was able to save a copy of this form. I reached out to the respected researchers and have had all my questions answered to my satisfaction.\n";
+    return "                   I was able to save a copy of this form. I reached out to the listed researchers and have had all my questions answered to my satisfaction.\n";
 },"132":function(container,depth0,helpers,partials,data) {
     return "                    I have been given a copy of this form. I have had all my questions answered to my satisfaction. \n";
 },"134":function(container,depth0,helpers,partials,data) {
