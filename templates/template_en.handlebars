@@ -36,7 +36,7 @@
             {{else}}<li>You will receive no compensation.</li>{{/if}}
             <li>We may publish results from this and other sessions.</li>
             {{#if (equal share 'yes')}}<li>All data you provide in this {{type}} will be published <b>not anonymized</b></li>.
-            {{else if (equal share 'anonymized')}}<li>All data you provide in this field study will be published anonymized; thus, they will neither include your name nor cannot be associated with your identity.</li>
+            {{else if (equal share 'anonymized')}}<li>All data you provide in this {{type}} will be published anonymized; thus, they will neither include your name nor cannot be associated with your identity.</li>
             {{else}}<li>The data collected cannot be viewed or used for further research by anyone outside the researchers involved in this work. </li>{{/if}}
         </ul>
         <p>If you have any questions about the whole informed consent process of this research or your rights as a
@@ -88,7 +88,7 @@
         <p style="padding-left: 10px; padding-top: 0px">{{breaklines procedure}}</p>
         <p>The complete procedure of this {{type}} will last approximately {{duration}}.</p></div>
     <div class="pageBreak"><h3>4. Risks and Benefits</h3>
-        <p>There are no risks associated with this field study. Discomforts or inconveniences will be minor and are
+        <p>There are no risks associated with this {{type}}. Discomforts or inconveniences will be minor and are
             unlikely to happen. If you feel uncomfortable, you may discontinue your participation.
             {{#if (equal compensation 'none')}}
                 (You will not directly benefit through participation in this {{type}}. We hope that the settings obtained from your participation may help to bring forward the research in this field.)
@@ -171,9 +171,7 @@
                 Data collected that have not been made public will be deleted after the end of the research.
             {{/if}}
         </p>
-        <p>As with any publication or online-related activity, the risk of a breach of confidentiality is always
-            possible. According to the GDPR, the researchers will inform the participant if a breach of confidential
-            data is detected. </p></div>
+        <p>As with any publication or online-related activity, the risk of a breach of confidentiality is always possible. According to the GDPR, the researchers will inform the participant if a breach of confidential data is detected. </p></div>
     <div class="pageBreak"><h3>6. Identification of Investigators</h3>
         <p>If you have any questions or concerns about the research, please feel free to contact: </p>
         {{#if researchers}}
@@ -196,15 +194,18 @@
             <tbody>
             <tr>
                 <td class="check">&#9744;</td>
-                <td>I understand the explanation provided to me. I have been given a copy of this form. I have
-                    had all my questions answered to my satisfaction, and I voluntarily agree to participate in this
-                    field study.
+                 <td>I understand the explanation provided to me. 
+                {{#if (equal type 'online study')}}
+                   I was able to save a copy of this form. I reached out to the respected researchers and have had all my questions answered to my satisfaction.
+                {{else}}
+                    I have been given a copy of this form. I have had all my questions answered to my satisfaction. 
+                {{/if}}
+                Therefore, I voluntarily agree to participate in this {{type}}.
                 </td>
             </tr>
             <tr>
                 <td class="check">&#9744;</td>
-                <td>I voluntarily consent to my data being recorded and subsequently processed in line with the
-                    GDPR. I have been informed about the consequences of withdrawing my consent.
+                <td>I voluntarily consent to my data being recorded and subsequently processed in line with the GDPR. I have been informed about the consequences of withdrawing my consent.
                 </td>
             </tr>
             {{#if (equal share 'yes')}}
