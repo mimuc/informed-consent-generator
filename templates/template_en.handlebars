@@ -97,8 +97,7 @@
             With this research, we will advance knowledge in this research field.</p></div>
     <div class="pageBreak"><h3>5. Data Protection and Confidentiality</h3>
         <p>The General Data Protection Regulation (GDPR) of the European Union (EU) governs that data collection
-            process. The legal basis for processing the personal data is the consent in accordance with GDPR Art. 6
-            (1). The GDPR guarantees a set of rights to the data subjects, including the right to access,
+            The legal basis for processing personal data is the participant's consent pursuant to Art. 6(1)(a) GDPR. The GDPR guarantees a set of rights to the data subjects, including the right to access,
             rectification, and erasure of personal data. </p>
         <ul>
             <li>You have the right to access your personal data at any time (GDPR Art. 15).</li>
@@ -123,14 +122,8 @@
 
             {{#if (equal share 'yes')}}
                 All data you provide in this {{type}} will be published <b>not anonymized</b>. Subsequent uses of records and data will be subject to standard data use policies.
-            {{else if (equal share 'anomymized')}}
-                All data you provide in this {{type}} will be published anonymized. Subsequent uses of records and data
-                will be subject to standard data use policies that protect the participating individuals' anonymity. We
-                will remove or code any personal information that could identify you before publishing the data to
-                ensure that no one can identify you from the information we share. We will use current scientific
-                standards and known methods for anonymization. When your data are anonymized, they are altered in a
-                manner that they can no longer be traced back to your person or only with disproportionate technical
-                effort. Despite these measures, we cannot guarantee the anonymity of your personal data.
+            {{else if (equal share 'anonymized')}}
+                All data you provide in this {{type}} will be published anonymized. Subsequent uses of records and datawill be subject to standard data use policies that protect the participating individuals' anonymity. We will remove or code any personal information that could identify you before publishing the data to ensure that no one can identify you from the information we share. We will use current scientific standards and known methods for anonymization. When your data are anonymized, they are altered in a manner that they can no longer be traced back to your person or only with disproportionate technical effort. Despite these measures, we cannot guarantee the anonymity of your personal data.
             {{else}}
                 All data you provide in this {{type}} will not be published and kept confidential.
             {{/if}}
